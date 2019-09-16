@@ -49,7 +49,7 @@ class _MainScreenState extends State<MainScreen> {
 
             IconButton(
               icon:Icon(
-                Icons.label,
+                Icons.email,
                 size: 24.0,
               ),
               color: _page == 1
@@ -57,7 +57,7 @@ class _MainScreenState extends State<MainScreen> {
                   : Theme
                   .of(context)
                   .textTheme.caption.color,
-              onPressed: ()=>_pageController.jumpToPage(1),
+              onPressed: ()=>_pageController.jumpToPage(2),
             ),
 
             IconButton(

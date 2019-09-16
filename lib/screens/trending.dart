@@ -16,9 +16,9 @@ class _TrendingState extends State<Trending> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        title: Text("Trending Restaurants"),
+        title: Text("Os melhores Avaliados"),
         centerTitle: true,
-        automaticallyImplyLeading: false,
+        automaticallyImplyLeading: true,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios
@@ -55,7 +55,7 @@ class _TrendingState extends State<Trending> {
                       borderSide: BorderSide(color: Colors.white,),
                       borderRadius: BorderRadius.circular(5.0),
                     ),
-                    hintText: "Search..",
+                    hintText: "busca...",
                     prefixIcon: Icon(
                       Icons.search,
                       color: Colors.black,

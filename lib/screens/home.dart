@@ -45,7 +45,7 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
                     borderSide: BorderSide(color: Colors.white,),
                     borderRadius: BorderRadius.circular(5.0),
                   ),
-                  hintText: "Search..",
+                  hintText: "busca...",
                   prefixIcon: Icon(
                     Icons.search,
                     color: Colors.black,
@@ -80,7 +80,7 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  "Trending Restaurants",
+                  "Os melhores Avaliados",
                   style: TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.w800,
