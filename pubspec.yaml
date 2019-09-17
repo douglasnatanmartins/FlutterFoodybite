@@ -24,9 +24,12 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   firebase_auth: ^0.14.0+5
-  cloud_firestore: ^0.12.9+4
+  cloud_firestore: ^0.12.9+3
   scoped_model: ^1.0.1
   page_transition: ^1.1.4
+  google_sign_in: ^4.0.7
+  font_awesome_flutter: ^8.5.0
+
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +65,8 @@ flutter:
     - assets/cm2.jpeg
     - assets/cm3.jpeg
     - assets/cm4.jpeg
+    - images/login_logo.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -88,3 +93,30 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+fonts:
+  - family: WorkSansSemiBold
+    fonts:
+      - asset: assets/fonts/Work_Sans/WorkSans-SemiBold.ttf
+
+  - family: WorkSansBold
+    fonts:
+      - asset: assets/fonts/Work_Sans/WorkSans-Bold.ttf
+
+  - family: WorkSansMedium
+    fonts:
+      - asset: assets/fonts/Work_Sans/WorkSans-Medium.ttf
+
+  - family: Poppins
+    fonts:
+          - asset: fonts/Poppins-Regular.ttf
+          - asset: fonts/Poppins-Medium.ttf
+          - asset: fonts/Poppins-Bold.ttf
+            weight: 700
+
+  - family: Pacifico
+    fonts:
+          - asset: fonts/Pacifico.ttf
+  - family: Fryo
+    fonts:
+          - asset: fonts/Fryo.ttf

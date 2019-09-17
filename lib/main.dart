@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_foodybite/screens/homePage.dart';
 import 'package:flutter_foodybite/screens/main_screen.dart';
 import 'package:flutter_foodybite/util/const.dart';
+import 'package:scoped_model/scoped_model.dart';
+
+import 'models/user_model.dart';
 
 
 void main() async{
@@ -32,11 +36,14 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: Constants.appName,
-      theme: isDark ? Constants.darkTheme : Constants.lightTheme,
-      home: MainScreen(),
+    return ScopedModel<UserModel>(
+      model: UserModel(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: Constants.appName,
+        theme: isDark ? Constants.darkTheme : Constants.lightTheme,
+        home: HomePage(),
+      ),
     );
   }
 }
