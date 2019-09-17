@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1013872578149",
+    "firebase_url": "https://menu-sti.firebaseio.com",
+    "project_id": "menu-sti",
+    "storage_bucket": "menu-sti.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013872578149:android:06d04a156b02aa2dfa008c",
+        "android_client_info": {
+          "package_name": "com.jideguru.flutter_foodybite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013872578149-qial842sojjcn0r9chjujegnkiusd1hb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtqq4bNFeKU3GVn_kpP7JT59ILavNYyqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013872578149-qial842sojjcn0r9chjujegnkiusd1hb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
