@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1013872578149-94bccp5385rsi62upb43i50gkglj2kmr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jideguru.flutter_foodybite",
+            "certificate_hash": "514dab3206cbd5768399e47afe6310a7857f624b"
+          }
+        },
+        {
           "client_id": "1013872578149-12vr6806mdcgqcf6k9d9f34rdp0dif4s.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

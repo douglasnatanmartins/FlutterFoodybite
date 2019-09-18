@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as prefix0;
 import 'package:flutter_foodybite/models/signInGoogle.dart';
+import 'package:flutter_foodybite/screens/home.dart';
 import 'package:flutter_foodybite/screens/sigin_up_page.dart';
 import 'package:flutter_foodybite/screens/signi_in_page.dart';
 import 'package:flutter_foodybite/styles/color.dart';
@@ -146,13 +147,15 @@ class _HomePageState extends State<HomePage> {
     return Container(
       child: RaisedButton(
         color: Colors.red,
-        onPressed: () {
+        onPressed: (
+
+            ) {
           signInWithGoogle( ).whenComplete( () {
-            Navigator.of( context ).push( MaterialPageRoute(
-                builder: (context) {
-                  return HomePage( );
-                }
-            ) );
+            Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (context)=> Home()
+              )
+            );
           } );
         },
         shape: RoundedRectangleBorder(
