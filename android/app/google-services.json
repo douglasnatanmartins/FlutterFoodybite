@@ -15,31 +15,22 @@
       },
       "oauth_client": [
         {
-          "client_id": "1013872578149-p6vh8d2fd07omdbi8u9ssn5sll22feda.apps.googleusercontent.com",
+          "client_id": "1013872578149-12vr6806mdcgqcf6k9d9f34rdp0dif4s.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.jideguru.flutter_foodybite",
-            "certificate_hash": "514dab3206cbd5768399e47afe6310a7857f624b"
+            "certificate_hash": "fa6f845cd2e208d6bfba14a5963629555a4ed2c7"
           }
-        },
-        {
-          "client_id": "1013872578149-qial842sojjcn0r9chjujegnkiusd1hb.apps.googleusercontent.com",
-          "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBtqq4bNFeKU3GVn_kpP7JT59ILavNYyqc"
+          "current_key": "AIzaSyDFl4fbPk69kDuC2aO36oZ0FAjZlvTMvBs"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1013872578149-qial842sojjcn0r9chjujegnkiusd1hb.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

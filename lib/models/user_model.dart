@@ -105,3 +105,5 @@ class UserModel extends Model {
     await Firestore.instance.collection("users").document(firebaseUser.uid).setData(userData);
   }
 }
+
+
