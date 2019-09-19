@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.pushReplacement( context, PageTransition(
                           type: PageTransitionType.rotate,
                           duration: Duration( seconds: 1 ),
-                          child: SignInPage( ) ) );
+                          child: Home( ) ) );
                     },
                     child: Text( "Entrar", style: TextStyle(
                         color: prefix0.Colors.white,

@@ -10,11 +10,9 @@ class _MainScreenState extends State<MainScreen> {
   PageController _pageController;
   int _page = 0;
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: PageView(
         physics: NeverScrollableScrollPhysics(),
         controller: _pageController,

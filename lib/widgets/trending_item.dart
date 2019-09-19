@@ -36,7 +36,7 @@ class _TrendingItemState extends State<TrendingItem> {
               Stack(
                 children: <Widget>[
                   Container(
-                    height: MediaQuery.of(context).size.height/3.5,
+                    height: MediaQuery.of(context).size.height/2.5,
                     width: MediaQuery.of(context).size.width,
                     child: ClipRRect(
                       borderRadius: BorderRadius.only(
@@ -120,7 +120,7 @@ class _TrendingItemState extends State<TrendingItem> {
               SizedBox(height: 7.0),
 
               Padding(
-                padding: EdgeInsets.only(left: 15.0),
+                padding: EdgeInsets.only(left: 10.0),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   child: Text(

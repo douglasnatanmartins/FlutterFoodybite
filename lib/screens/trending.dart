@@ -15,7 +15,7 @@ class _TrendingState extends State<Trending> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0.0,
+        elevation: 2,
         title: Text("Os melhores Avaliados"),
         centerTitle: true,
         automaticallyImplyLeading: true,
