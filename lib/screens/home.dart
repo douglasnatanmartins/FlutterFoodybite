@@ -94,8 +94,8 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home> {
                   child: Text(
                     "See all (43)",
                     style: TextStyle(
-//                      fontSize: 20,
-//                      fontWeight: FontWeight.w800,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w800,
                       color: Theme.of(context).accentColor,
                     ),
                   ),
@@ -139,7 +139,7 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home> {
               ),
             ),
 
-            SizedBox(height: 10.0),
+            SizedBox(height: 5.0),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

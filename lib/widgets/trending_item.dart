@@ -29,7 +29,7 @@ class _TrendingItemState extends State<TrendingItem> {
         height: MediaQuery.of(context).size.height/2.5,
         width: MediaQuery.of(context).size.width,
         child: Card(
-          shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(10.0)),
+          shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(5.0)),
           elevation: 3.0,
           child: Column(
             children: <Widget>[
@@ -44,7 +44,7 @@ class _TrendingItemState extends State<TrendingItem> {
                         topRight: Radius.circular(10),
                       ),
                       child: Image.asset(
-                        "${widget.img}",
+                        "${widget.img}", scale: 2,
                         fit: BoxFit.cover,
                       ),
                     ),
