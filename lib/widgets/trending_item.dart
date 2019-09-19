@@ -33,6 +33,7 @@ class _TrendingItemState extends State<TrendingItem> {
             shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(5.0)),
             elevation: 3.0,
             child: Wrap(
+
               children: <Widget>[
                 Stack(
                   children: <Widget>[
