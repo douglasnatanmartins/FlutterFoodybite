@@ -37,20 +37,23 @@ class _SignUpPageState extends State<SignUpPage> {
     return Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(
-          elevation: 16.0,
+          elevation: 10.0,
           backgroundColor: white,
           title: Text('Inscrever-se',
               style: TextStyle(
-                  color: Colors.grey, fontFamily: 'Poppins', fontSize: 15)),
+                  color: Colors.grey, fontFamily: 'Poppins', fontSize: 20)),
           actions: <Widget>[
             FlatButton(
               onPressed: () {
                 // Navigator.of(context).pushReplacementNamed('/signin');
                 Navigator.pushReplacement(context, PageTransition(
-                    type: PageTransitionType.rightToLeft, child: SignInPage()
+                    type: PageTransitionType.rotate,
+                    duration: Duration(seconds: 1),
+                    child: SignInPage()
                 ));
               },
-              child: Text('Entrar', style: contrastText),
+              padding: EdgeInsets.all(3),
+              child: Text('Entrar', style: TextStyle( fontWeight: FontWeight.bold, fontSize: 20, color: Colors.green)),
             )
           ],
         ),
@@ -67,9 +70,10 @@ class _SignUpPageState extends State<SignUpPage> {
                     controller: _nameController,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0)),
+                            borderRadius: BorderRadius.circular(10.0),),
                         hintText: "Nome Completo",
                         labelText: "Nome Completo",
+                        focusColor: Colors.green,
                         icon: Icon(
                           Icons.account_circle,
                           color: Colors.green,

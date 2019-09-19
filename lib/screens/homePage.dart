@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     padding: EdgeInsets.all( 0 ),
                     child:
-                    _signInButton( ),
+                    _signInButton(),
                   ),
                 ),
                 Container(
@@ -148,7 +148,6 @@ class _HomePageState extends State<HomePage> {
       child: RaisedButton(
         color: Colors.red,
         onPressed: (
-
             ) {
           signInWithGoogle( ).whenComplete( () {
             Navigator.of(context).pushReplacement(
@@ -184,4 +183,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+
 
