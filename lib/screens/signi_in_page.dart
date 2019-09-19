@@ -46,7 +46,7 @@ class _SignInPageState extends State<SignInPage> {
               child: Text(
                 'Inscrever-se',
                 style: TextStyle(
-                    color: Colors.green,
+                    color: Colors.purple,
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
@@ -70,7 +70,7 @@ class _SignInPageState extends State<SignInPage> {
                   style: TextStyle(
                       fontSize: 28,
                       fontFamily: "Poppins",
-                      color: Colors.green,
+                      color: Colors.purple,
                       fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
@@ -86,7 +86,7 @@ class _SignInPageState extends State<SignInPage> {
                       labelText: "e-mail",
                       icon: Icon(
                         Icons.email,
-                        color: Colors.green,
+                        color: Colors.purple,
                       )),
                   keyboardType: TextInputType.emailAddress,
                   // ignore: missing_return
@@ -106,7 +106,7 @@ class _SignInPageState extends State<SignInPage> {
                       helperText: " ",
                       icon: Icon(
                         Icons.vpn_key,
-                        color: Colors.green,
+                        color: Colors.purple,
                       )),
                   obscureText: true,
                   // ignore: missing_return
@@ -154,7 +154,10 @@ class _SignInPageState extends State<SignInPage> {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child:Container(
-                    child: FlatButton(
+                    padding:  EdgeInsets.all(10),
+                    width: 250,
+                    margin: EdgeInsets.only(bottom: 0),
+                    child: RaisedButton(
                       onPressed: () {
                         if (_formKey.currentState.validate()) {}
                         model.signIn(
@@ -164,17 +167,19 @@ class _SignInPageState extends State<SignInPage> {
                           onFaill: _onFail,
                         );
                       },
-                      color: Colors.green,
+                      color: Colors.purple[700],
                       padding: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
-                      focusColor: Colors.white,
+                      focusColor: Colors.purple,
                       shape: StadiumBorder(),
                       child: Text("Entrar", style:TextStyle(fontSize: 25.0,
                         color: Colors.white,
                         fontWeight: FontWeight.w700,),
                       ),
+                      elevation: 5,
                     ),
                   )
-              )],
+              )
+              ],
             ),
           )
           );

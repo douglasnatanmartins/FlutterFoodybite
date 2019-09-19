@@ -21,7 +21,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool isDark = false;
+  bool isDark = true;
 
   @override
   void initState() {
@@ -41,7 +41,9 @@ class _MyAppState extends State<MyApp> {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: Constants.appName,
-        theme: isDark ? Constants.darkTheme : Constants.lightTheme,
+        theme:ThemeData(
+    primarySwatch: Colors.purple,
+        primaryColor: Colors.purple),
         home: HomePage(),
       ),
     );

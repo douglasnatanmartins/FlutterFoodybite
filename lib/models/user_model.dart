@@ -30,13 +30,13 @@ class UserModel extends Model {
 
       await _saveUserData(userData);
 
-      onFail();
+      onSuccess();
       isLoading = false;
       notifyListeners();
 
     }).catchError((erro){
       print("falha: erro" + erro.toString());
-      onSuccess();
+      onFail();
       isLoading = false;
       notifyListeners();
     });

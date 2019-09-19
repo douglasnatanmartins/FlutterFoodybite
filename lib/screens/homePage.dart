@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                   margin: EdgeInsets.only( bottom: 10, top: 0 ),
                   child: Text( 'Menu Fryo.!',
                     style: TextStyle( fontSize: 40, color: prefix0.Colors.white,
-                        fontFamily: "Poppins" ),
+                        fontFamily: "Poppins" , fontWeight: FontWeight.w700),
                   ),
                   padding: EdgeInsets.all( 10 ),
                 ),
@@ -74,12 +74,12 @@ class _HomePageState extends State<HomePage> {
                     },
                     child: Text( "Entrar", style: TextStyle(
                         color: prefix0.Colors.white,
-                        fontSize: 20,
+                        fontSize: 22,
                         fontFamily: "Poppins"
                     ),
                     ),
                     shape: StadiumBorder( ),
-                    color: primaryColor,
+                    color: Colors.purple[700],
                     padding: EdgeInsets.all( 10 ),
                   ),
                 ),
@@ -90,8 +90,8 @@ class _HomePageState extends State<HomePage> {
                   child: FlatButton(
                     onPressed: () {
                       Navigator.pushReplacement( context, PageTransition(
-                          type: PageTransitionType.downToUp,
-                          duration: Duration( seconds: 1 ),
+                          type: PageTransitionType.leftToRightWithFade,
+                          duration: Duration( milliseconds: 10 ),
                           child: SignUpPage( ) ) );
                     },
                     child: Text( "Increver-se", style: TextStyle(
@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     ),
                     shape: StadiumBorder( ),
-                    color: primaryColor,
+                    color: Colors.purple[700],
                     padding: EdgeInsets.all( 10 ),
                   ),
                 ),
