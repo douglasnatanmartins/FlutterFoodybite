@@ -90,8 +90,8 @@ class _HomePageState extends State<HomePage> {
                   child: FlatButton(
                     onPressed: () {
                       Navigator.pushReplacement( context, PageTransition(
-                          type: PageTransitionType.leftToRightWithFade,
-                          duration: Duration( milliseconds: 10 ),
+                          type: PageTransitionType.downToUp,
+                          duration: Duration( seconds: 1 ),
                           child: SignUpPage( ) ) );
                     },
                     child: Text( "Increver-se", style: TextStyle(
