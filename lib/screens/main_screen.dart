@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_foodybite/screens/home.dart';
+import 'package:flutter_foodybite/screens/homePage.dart';
+import 'package:flutter_foodybite/screens/trending.dart';
+import 'package:flutter_foodybite/widgets/trending_item.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -21,7 +24,7 @@ class _MainScreenState extends State<MainScreen> {
           Home(),
           Home(),
           Home(),
-          Home(),
+          Trending(),
           Home(),
         ],
       ),
@@ -38,24 +41,22 @@ class _MainScreenState extends State<MainScreen> {
                 size: 24.0,
               ),
               color: _page == 0
-                  ? Theme.of(context).accentColor
-                  : Theme
-                  .of(context)
-                  .textTheme.caption.color,
+                  ? Theme.of(context).cardColor
+                  : Theme.of(context).primaryColorLight,
               onPressed: ()=>_pageController.jumpToPage(0),
             ),
 
             IconButton(
               icon:Icon(
-                Icons.email,
+                Icons.shop,
                 size: 24.0,
               ),
               color: _page == 1
-                  ? Theme.of(context).accentColor
+                  ? Theme.of(context).cardColor
                   : Theme
                   .of(context)
-                  .textTheme.caption.color,
-              onPressed: ()=>_pageController.jumpToPage(2),
+                  .primaryColorLight,
+              onPressed: ()=>_pageController.jumpToPage(1),
             ),
 
             IconButton(
@@ -65,23 +66,23 @@ class _MainScreenState extends State<MainScreen> {
                 color: Theme.of(context).primaryColor,
               ),
               color: _page == 2
-                  ? Theme.of(context).accentColor
+                  ? Theme.of(context).cardColor
                   : Theme
                   .of(context)
-                  .textTheme.caption.color,
+                  .primaryColorLight,
               onPressed: ()=>_pageController.jumpToPage(2),
             ),
 
             IconButton(
               icon: Icon(
-                Icons.notifications,
+                Icons.library_books,
                 size: 24.0,
               ),
               color: _page == 3
-                  ? Theme.of(context).accentColor
+                  ? Theme.of(context).cardColor
                   : Theme
                   .of(context)
-                  .textTheme.caption.color,
+                  .primaryColorLight,
               onPressed: ()=>_pageController.jumpToPage(3),
             ),
 
@@ -91,10 +92,10 @@ class _MainScreenState extends State<MainScreen> {
                 size: 24.0,
               ),
               color: _page == 4
-                  ? Theme.of(context).accentColor
+                  ? Theme.of(context).cardColor
                   : Theme
                   .of(context)
-                  .textTheme.caption.color,
+                  .primaryColorLight,
               onPressed: ()=>_pageController.jumpToPage(4),
             ),
 

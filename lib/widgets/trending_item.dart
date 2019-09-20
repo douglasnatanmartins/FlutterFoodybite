@@ -13,8 +13,7 @@ class TrendingItem extends StatefulWidget {
     @required this.title,
     @required this.address,
     @required this.rating,
-  })
-      : super(key: key);
+  }) : super(key: key);
 
   @override
   _TrendingItemState createState() => _TrendingItemState();
@@ -27,19 +26,19 @@ class _TrendingItemState extends State<TrendingItem> {
       child: Padding(
         padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
         child: Container(
-          height: MediaQuery.of(context).size.height/2.5,
+          height: MediaQuery.of(context).size.height / 2.5,
           width: MediaQuery.of(context).size.width,
           child: Card(
-            shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(5.0)),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5.0)),
             elevation: 3.0,
             child: Wrap(
-
               children: <Widget>[
                 Stack(
                   children: <Widget>[
                     Container(
-                      height: MediaQuery.of(context).size.height/2.5,
-                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height / 3.5,
+                      width: MediaQuery.of(context).size.width * 1.1,
                       child: ClipRRect(
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(10),
@@ -48,7 +47,6 @@ class _TrendingItemState extends State<TrendingItem> {
                         child: Image.asset(
                           "${widget.img}",
                           fit: BoxFit.cover,
-                          scale: 3,
                         ),
                       ),
                     ),
@@ -56,7 +54,8 @@ class _TrendingItemState extends State<TrendingItem> {
                       top: 3.0,
                       right: 6.0,
                       child: Card(
-                        shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(4.0)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(4.0)),
                         child: Padding(
                           padding: EdgeInsets.all(2.0),
                           child: Row(
@@ -69,7 +68,7 @@ class _TrendingItemState extends State<TrendingItem> {
                               Text(
                                 " ${widget.rating} ",
                                 style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 15,
                                 ),
                               ),
                             ],
@@ -77,23 +76,27 @@ class _TrendingItemState extends State<TrendingItem> {
                         ),
                       ),
                     ),
-
                     Positioned(
-                      top: 6.0,
-                      left: 6.0,
-                      child: Card(
-                        shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(3.0)),
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child:Text(
-                            " OPEN ",
-                            style: TextStyle(
-                              fontSize: 10,
-                              color: Colors.green,
-                              fontWeight: FontWeight.bold,
+                      bottom: 0.0,
+                      right: 2.0,
+                      child: Padding(
+                          padding: EdgeInsets.all(1),
+                            child: RaisedButton(
+                              onPressed: () {
+
+                              },
+                              child: Text( "Abrir",
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.purple,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
-                        ),
+                            padding: EdgeInsets.zero,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.0)),
+                            color: Colors.white,
+                              elevation: 3,
+                          )
                       ),
                     ),
                   ],
@@ -129,9 +132,7 @@ class _TrendingItemState extends State<TrendingItem> {
                     ),
                   ),
                 ),
-
                 SizedBox(height: 10.0),
-
               ],
             ),
           ),

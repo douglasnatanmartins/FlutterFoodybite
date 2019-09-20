@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as prefix0;
 import 'package:flutter_foodybite/models/signInGoogle.dart';
 import 'package:flutter_foodybite/screens/home.dart';
+import 'package:flutter_foodybite/screens/main_screen.dart';
 import 'package:flutter_foodybite/screens/sigin_up_page.dart';
 import 'package:flutter_foodybite/screens/signi_in_page.dart';
 import 'package:flutter_foodybite/styles/color.dart';
@@ -70,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.pushReplacement( context, PageTransition(
                           type: PageTransitionType.rotate,
                           duration: Duration( seconds: 1 ),
-                          child: Home( ) ) );
+                          child: MainScreen( ) ) );
                     },
                     child: Text( "Entrar", style: TextStyle(
                         color: prefix0.Colors.white,
@@ -79,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     ),
                     shape: StadiumBorder( ),
-                    color: Colors.purple[700],
+                    color: Colors.purple,
                     padding: EdgeInsets.all( 10 ),
                   ),
                 ),
@@ -100,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     ),
                     shape: StadiumBorder( ),
-                    color: Colors.purple[700],
+                    color: Colors.purple,
                     padding: EdgeInsets.all( 10 ),
                   ),
                 ),
@@ -152,7 +153,7 @@ class _HomePageState extends State<HomePage> {
           signInWithGoogle( ).whenComplete( () {
             Navigator.of(context).pushReplacement(
               MaterialPageRoute(
-                builder: (context)=> Home()
+                builder: (context)=> MainScreen()
               )
             );
           } );

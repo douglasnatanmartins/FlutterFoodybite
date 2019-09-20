@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_foodybite/screens/main_screen.dart';
 import 'package:flutter_foodybite/screens/trending.dart';
 import 'package:flutter_foodybite/util/categories.dart';
 import 'package:flutter_foodybite/util/friends.dart';
@@ -79,35 +81,38 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home> {
         child: ListView(
           children: <Widget>[
             SizedBox(height: 20.0),
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+            Wrap(
               children: <Widget>[
-                Text(
-                  "Os melhores Avaliados",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-                FlatButton(
-                  child: Text(
-                    "See all (43)",
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w800,
-                      color: Theme.of(context).accentColor,
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (BuildContext context) {
-                          return Trending();
-                        },
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      "Melhores Avaliados",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w800,
                       ),
-                    );
-                  },
+                    ),
+                    FlatButton(
+                      child: Text(
+                        "Ver mais >",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w800,
+                          color: Theme.of(context).accentColor,
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) {
+                              return Trending();
+                            },
+                          ),
+                        );
+                      },
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -119,21 +124,21 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home> {
               height: MediaQuery.of(context).size.height / 2.4,
               width: MediaQuery.of(context).size.width,
               child: ListView.builder(
-                primary: false,
+                primary: true,
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 itemCount: restaurants == null ? 0 : restaurants.length,
                 itemBuilder: (BuildContext context, int index) {
                   Map restaurant = restaurants[index];
-
                   return Padding(
-                    padding: EdgeInsets.only(right: 10.0),
+                    padding: EdgeInsets.only(right: 5.0),
                     child: SlideItem(
                       img: restaurant["img"],
                       title: restaurant["title"],
                       address: restaurant["address"],
                       rating: restaurant["rating"],
                     ),
+
                   );
                 },
               ),

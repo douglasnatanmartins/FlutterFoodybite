@@ -15,7 +15,7 @@ class _TrendingState extends State<Trending> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 2,
+        elevation: 5,
         title: Text("Os melhores Avaliados"),
         centerTitle: true,
         automaticallyImplyLeading: true,
@@ -65,7 +65,7 @@ class _TrendingState extends State<Trending> {
                       color: Colors.black,
                     ),
                     hintStyle: TextStyle(
-                      fontSize: 15.0,
+                      fontSize: 10.0,
                       color: Colors.black,
                     ),
                   ),
