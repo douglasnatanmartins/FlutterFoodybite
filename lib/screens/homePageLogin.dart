@@ -13,17 +13,17 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomePage extends StatefulWidget {
+class HomePageLogin extends StatefulWidget {
   final String pageTitle;
 
 
-  HomePage({Key key, this.pageTitle}) : super( key: key );
+  HomePageLogin({Key key, this.pageTitle}) : super( key: key );
 
   @override
   _HomePageState createState() => _HomePageState( );
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePageLogin> {
 
   @override
   Widget build(BuildContext context) {

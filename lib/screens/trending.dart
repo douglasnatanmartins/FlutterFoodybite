@@ -86,7 +86,7 @@ class _TrendingState extends State<Trending> {
               itemBuilder: (BuildContext context, int index) {
                 Map restaurant = restaurants[index];
 
-                return TrendingItem(
+                return _TrendingState(
                   img: restaurant["img"],
                   title: restaurant["title"],
                   address: restaurant["address"],
