@@ -15,7 +15,13 @@ class UserModel extends Model {
   bool isLoading = false;
 
 
+  @override
+  void addListener(VoidCallback listener) {
+    super.addListener(listener);
+    _loadingDoUsuarioAtual();
+  }
   //SignUp - Inscrever-se
+
   void signUp({@required Map<String, dynamic> userData, @required String pass,
     @required VoidCallback onSuccess, @required VoidCallback onFail}){
 
@@ -55,9 +61,11 @@ class UserModel extends Model {
     _auth.signInWithEmailAndPassword(
         email: email,
         password: pass
-    ).then((user)
+    ).then((user) async
     {
       firebaseUser = user.user;
+
+      await _loadingDoUsuarioAtual();
 
       onSuccess();
       isLoading = false;
@@ -97,12 +105,22 @@ class UserModel extends Model {
   }
 
 
-
-
-
   Future<Null> _saveUserData(Map<String, dynamic> userData) async {
     this.userData = userData;
     await Firestore.instance.collection("users").document(firebaseUser.uid).setData(userData);
+  }
+
+  Future<Null> _loadingDoUsuarioAtual() async{
+    if(firebaseUser == null)
+      firebaseUser = await _auth.currentUser();
+    if(firebaseUser !=null){
+      if(userData["name"] == null){
+        DocumentSnapshot docUser =
+            await Firestore.instance.collection("users").document(firebaseUser.uid).get();
+        userData = docUser.data;
+      }
+    }
+    notifyListeners();
   }
 }
 

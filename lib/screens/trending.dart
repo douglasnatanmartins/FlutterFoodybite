@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_foodybite/screens/main_screen.dart';
 import 'package:flutter_foodybite/util/const.dart';
 import 'package:flutter_foodybite/util/restaurants.dart';
 import 'package:flutter_foodybite/widgets/trending_item.dart';
+import 'package:page_transition/page_transition.dart';
 
 class Trending extends StatefulWidget {
   @override
@@ -23,7 +25,11 @@ class _TrendingState extends State<Trending> {
           icon: Icon(
             Icons.arrow_back_ios
           ),
-          onPressed: ()=>Navigator.pop(context),
+          onPressed: ()=> Navigator.pushReplacement(context, PageTransition(
+              type: PageTransitionType.rotate,
+              duration: Duration(seconds: 1),
+              child: MainScreen()
+          ))
         ),
       ),
 
