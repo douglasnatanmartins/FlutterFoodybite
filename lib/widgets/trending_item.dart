@@ -1,3 +1,7 @@
+import 'dart:typed_data';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_foodybite/util/const.dart';
 
@@ -7,6 +11,9 @@ class TrendingItem extends StatefulWidget {
   final String address;
   final String rating;
 
+
+
+
   TrendingItem({
     Key key,
     @required this.img,
@@ -15,13 +22,38 @@ class TrendingItem extends StatefulWidget {
     @required this.rating,
   }) : super(key: key);
 
+
   @override
   _TrendingItemState createState() => _TrendingItemState();
 }
 
 class _TrendingItemState extends State<TrendingItem> {
+
+  /*final FirebaseStorage storage = FirebaseStorage(
+      app: Firestore.instance.app,
+      storageBucket: 'gs://menu-sti.appspot.com' );
+  Uint8List imageBytes;
+  String erroMsg;
+
+  _MyHomePageState(){
+    storage.ref().child("adesivo-parede-prato-comida-frango-salada-restaurante-lindo-adesivo-parede.jpg").getData(10000000).then((data) =>
+        setState((){
+          imageBytes = data;
+        })
+    ).catchError((e) =>
+        setState(() {
+          erroMsg = e.error;
+        })
+    );
+  }
+*/
   @override
   Widget build(BuildContext context) {
+    /*var img = imageBytes != null ? Image.memory(
+      imageBytes,
+      fit: BoxFit.cover,
+    ) : Text(erroMsg != null ? erroMsg : "Loading...");*/
+
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
@@ -47,7 +79,7 @@ class _TrendingItemState extends State<TrendingItem> {
                         child: Image.asset(
                           "${widget.img}",
                           fit: BoxFit.cover,
-                        ),
+                        )
                       ),
                     ),
                     Positioned(
