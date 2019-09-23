@@ -6,6 +6,7 @@ import 'package:flutter_foodybite/styles/color.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:page_transition/page_transition.dart';
 import 'home.dart';
+import 'main_screen.dart';
 class SignInPage extends StatefulWidget {
   final String pageTitle;
 
@@ -167,7 +168,7 @@ class _SignInPageState extends State<SignInPage> {
                           onFaill: _onFail,
                         );
                       },
-                      color: Colors.purple[700],
+                      color: Colors.purple,
                       padding: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
                       focusColor: Colors.purple,
                       shape: StadiumBorder(),
@@ -192,7 +193,7 @@ class _SignInPageState extends State<SignInPage> {
     Future.delayed(Duration(microseconds: 100)).then(
       (_) {
         Navigator.of(context)
-            .pushReplacement(MaterialPageRoute(builder: (context) => Home()));
+            .pushReplacement(MaterialPageRoute(builder: (context) => MainScreen()));
       },
     );
   }

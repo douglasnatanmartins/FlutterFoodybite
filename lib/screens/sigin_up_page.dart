@@ -7,6 +7,7 @@ import '../shared/colors.dart';
 import 'package:page_transition/page_transition.dart';
 
 import 'home.dart';
+import 'main_screen.dart';
 
 
 
@@ -40,7 +41,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(
-          elevation: 10.0,
+          elevation: 5.0,
           backgroundColor: Colors.white,
           title: Text('Inscrever-se',
               style: TextStyle(
@@ -101,7 +102,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         return "E-mail Invalido!";
                     },
                   ),
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 8.0),
                   TextFormField(
                     controller: _passController,
                     decoration: InputDecoration(
@@ -119,7 +120,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     },
                   ),
                   SizedBox(
-                    height: 10.0,
+                    height: 8.0,
                   ),
                   TextFormField(
                     controller: _adressController,
@@ -135,7 +136,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       if (text.isEmpty) return "Endereço Invalido!";
                     },
                   ),
-                  SizedBox(height: 40,),
+                  SizedBox(height: 15,),
                   Container(
                     padding: EdgeInsets.only(bottom: 5, top: 5, left: 60,right: 60),
                     width: 100,
@@ -157,7 +158,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           }
                         },
                         padding: EdgeInsets.only(top: 10, bottom: 10,),
-                        color: Colors.purple[700],
+                        color: Colors.purple,
                         shape: StadiumBorder(),
                         child: Text("Criar Conta", style: TextStyle(
                           color: Colors.white,
@@ -189,7 +190,7 @@ class _SignUpPageState extends State<SignUpPage> {
     Future.delayed(Duration(seconds: 2)).then((_) {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(
-              builder: (context) => Home())
+              builder: (context) => MainScreen())
       );
     }
     );

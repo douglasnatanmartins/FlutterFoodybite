@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePageLogin> {
                             Navigator.pushReplacement( context, PageTransition(
                                 type: PageTransitionType.rotate,
                                 duration: Duration( seconds: 1 ),
-                                child: MainScreen( ) ) );
+                                child: SignInPage() ) );
                           },
                           child: Text( "Entrar", style: TextStyle(
                               color: prefix0.Colors.white,
@@ -148,7 +148,8 @@ class _HomePageState extends State<HomePageLogin> {
             ),
           );
         } else {
-          return MainScreen();
+          return
+            MainScreen();
         }
       }
       );

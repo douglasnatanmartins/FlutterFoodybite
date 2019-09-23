@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_foodybite/screens/home.dart';
-import 'package:flutter_foodybite/screens/homePage.dart';
+
 import 'package:flutter_foodybite/screens/preferencias_usuario.dart';
 import 'package:flutter_foodybite/screens/trending.dart';
 import 'package:flutter_foodybite/widgets/trending_item.dart';

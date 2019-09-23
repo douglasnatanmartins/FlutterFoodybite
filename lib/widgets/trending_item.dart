@@ -1,5 +1,4 @@
 import 'dart:typed_data';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +28,7 @@ class TrendingItem extends StatefulWidget {
 
 class _TrendingItemState extends State<TrendingItem> {
 
-  /*final FirebaseStorage storage = FirebaseStorage(
+  final FirebaseStorage storage = FirebaseStorage(
       app: Firestore.instance.app,
       storageBucket: 'gs://menu-sti.appspot.com' );
   Uint8List imageBytes;
@@ -46,7 +45,7 @@ class _TrendingItemState extends State<TrendingItem> {
         })
     );
   }
-*/
+
   @override
   Widget build(BuildContext context) {
     /*var img = imageBytes != null ? Image.memory(

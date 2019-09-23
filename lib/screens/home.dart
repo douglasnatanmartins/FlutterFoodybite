@@ -89,7 +89,7 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home> {
                     Text(
                       "Melhores Avaliados",
                       style: TextStyle(
-                        fontSize: 26,
+                        fontSize: 22,
                         fontWeight: FontWeight.w800,
                       ),
                     ),

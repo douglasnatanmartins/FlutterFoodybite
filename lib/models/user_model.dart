@@ -101,7 +101,7 @@ class UserModel extends Model {
 
   //LOGAR USUARIO
   bool isLoggedIn() {
-    return firebaseUser != null;
+    return  firebaseUser != null;
   }
 
 
